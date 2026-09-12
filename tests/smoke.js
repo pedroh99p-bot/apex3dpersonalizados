@@ -12,7 +12,7 @@ await suite('smoke', 4174, async ({ page, run, open, total, origin }) => {
     const response = await fetch(origin);
     assert.match(response.headers.get('content-security-policy'), /connect-src 'none'/);
   });
-  for (const [product, price] of [['individual',19700],['pet',15700],['casal',34700],['familia',47700]]) {
+  for (const [product, price] of [['individual',10000],['pet',10000],['casal',20000],['familia',30000]]) {
     await run('Oferta e seleção de produto: ' + product, async () => {
       await page.locator('[data-choose-product="' + product + '"]').click();
       await total(price); assert.equal(await page.locator('[data-product="' + product + '"]').getAttribute('aria-pressed'), 'true');

@@ -3,7 +3,8 @@ import http from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { resolve, extname, sep } from 'node:path';
-const root = fileURLToPath(new URL('../', import.meta.url));
+const built = process.env.APEX_TEST_BUILD === '1';
+const root = fileURLToPath(new URL(built ? '../dist/' : '../', import.meta.url));
 const port = Number(process.env.PORT || 4173);
 const csp = `default-src 'none'; script-src 'self'; connect-src 'none'; style-src 'self'; img-src 'self' blob:; font-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'`;
 http.createServer(async (req, res) => {
@@ -15,8 +16,8 @@ http.createServer(async (req, res) => {
   try {
     const path = decodeURIComponent(new URL(req.url, `http://127.0.0.1:${port}`).pathname);
     if (path === '/index.html') { res.writeHead(302, { Location: '/' }); return res.end(); }
-    const publicPath = path === '/' ? '/dev.html' : path;
-    if (!/^\/(dev\.html|(?:js|css|config|assets)\/[\w./-]+)$/.test(publicPath)) { res.writeHead(404); return res.end(); }
+    const publicPath = path === '/' ? (built ? '/index.html' : '/dev.html') : path;
+    if (!/^\/((?:dev|index)\.html|(?:js|css|config|assets)\/[\w./-]+)$/.test(publicPath)) { res.writeHead(404); return res.end(); }
     const file = resolve(root, `.${publicPath}`);
     if (!file.startsWith(resolve(root) + sep)) { res.writeHead(403); return res.end(); }
     const data = await readFile(file);
