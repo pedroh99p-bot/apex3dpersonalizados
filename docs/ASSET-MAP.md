@@ -1,3 +1,41 @@
+# Assets ativos — Apex3D V0.6
+
+A V0.6 acrescenta **15 WebP locais** aos sete restaurados na V0.5: sete imagens de processo, três bases e cinco exemplos. Total: **22 assets restaurados**, todos **ORIGIN_REVIEW_REQUIRED**. A logo Apex permanece intacta. Fontes do sistema; zero mídia remota em runtime.
+
+As referências visuais não são apresentadas como produção ou clientes da Apex. As origens abaixo documentam a recuperação solicitada para staging; não comprovam licença. A classificação V0.6 prevalece sobre os inventários históricos ao final e em VISUAL-RESTORATION.
+
+| Arquivo | Origem exata | Bytes | SHA-256 | Situação |
+| --- | --- | --- | --- | --- |
+| assets/process/modelagem.webp | https://mifunko.com/personalizacion/wp-content/uploads/2026/05/paso2-proceso_funkos.webp | 40086 | c6faeaa56a5dd1bbc86530f1218fac5eb5c2d6ed1c180e320f8339b7d707ff8b | ORIGIN_REVIEW_REQUIRED |
+| assets/process/cor.webp | https://mifunko.com/personalizacion/wp-content/uploads/2026/05/paso3-proceso_funkos.webp | 42138 | e0144513b95dfc8e3fa846ed9a13fb975c8ccc8ebd419a623ce757ca3b5b6a1c | ORIGIN_REVIEW_REQUIRED |
+| assets/process/impressao.webp | https://mifunko.com/personalizacion/wp-content/uploads/2026/05/paso5-proceso_funkos.webp | 46652 | dcc3c24e146ac9c5a66f66cb950fafc8da64245ff75bb675082d10b417aa0df1 | ORIGIN_REVIEW_REQUIRED |
+| assets/process/acabamento.webp | https://mifunko.com/personalizacion/wp-content/uploads/2026/05/paso6-proceso_funkos.webp | 66330 | e99d67b5600f316f87e8465d3ab6501fc76c86b8784732784fd5545de232ab82 | ORIGIN_REVIEW_REQUIRED |
+| assets/process/pintura.webp | https://mifunko.com/personalizacion/wp-content/uploads/2026/05/paso7-proceso_funkos.webp | 59684 | 521249601b1e407431954a12dea1ea81f18fec1915f4be74d7be0bfade5eafbc | ORIGIN_REVIEW_REQUIRED |
+| assets/process/embalagem.webp | https://mifunko.com/personalizacion/wp-content/uploads/2026/05/paso8-proceso_funkos.webp | 52468 | b35bce11803f5d12a7333414275e86e1a1d641a12ba5c86b11e2e3601f8f6d7c | ORIGIN_REVIEW_REQUIRED |
+| assets/process/envio.webp | https://mifunko.com/personalizacion/wp-content/uploads/2026/05/paso9-proceso_funkos.webp | 63308 | f5f09dc5e93942cfa29cf8a5ff54511bd6e423c41cea7f6ec642c7e81956fb73 | ORIGIN_REVIEW_REQUIRED |
+| assets/products/base.webp | https://mifunko.com/personalizacion/wp-content/uploads/2026/05/extra-peana-funko.webp | 728 | 7a5383c51d20ad6aa1474d5651b2ee030aa50ee4352940dc30f20031fe6f7c78 | ORIGIN_REVIEW_REQUIRED |
+| assets/products/base-nome.webp | https://mifunko.com/personalizacion/wp-content/uploads/2026/06/extra-peana-nombre.webp | 824 | 9383f5b11d8e4bf3adced742683e5c2d7d7cea340d77ff57ec07aa431868cc04 | ORIGIN_REVIEW_REQUIRED |
+| assets/products/base-data.webp | https://mifunko.com/personalizacion/wp-content/uploads/2026/06/extra-peana-nombre-fecha.webp | 822 | 9d3a5fc2c026089933dee021bb7fbd9492221843f6d6530922916048b7a85de9 | ORIGIN_REVIEW_REQUIRED |
+| assets/examples/profissao-chef.webp | https://mifunko.com/personalizacion/wp-content/uploads/2026/06/individual-principal-3-1024x1024.webp | 74702 | ed275b7ba010426cb54a849408ea84c20e382021d90034f9c9f23af228468abd | ORIGIN_REVIEW_REQUIRED |
+| assets/examples/profissao-policial.webp | https://mifunko.com/personalizacion/wp-content/uploads/2026/06/individual-principal-4.webp | 31040 | 05389970740d690864b019377a6a2397eb8eeceddf7590046bf001200c84f208 | ORIGIN_REVIEW_REQUIRED |
+| assets/examples/musica.webp | https://mifunko.com/personalizacion/wp-content/uploads/2026/06/individual-principal-9-1024x1024.webp | 62026 | 86a5ad39b8c4e6253c3d1294fb6f896e62bb47fc5f4f7e25a77f01001a569caa | ORIGIN_REVIEW_REQUIRED |
+| assets/examples/casal-memorias.webp | https://mifunko.com/personalizacion/wp-content/uploads/2026/06/ejemplo-parejas-2.webp | 30808 | ab3a9005ed46576b7e80ae838f6fd8fe57739468e5033771b8987f23c688466e | ORIGIN_REVIEW_REQUIRED |
+| assets/examples/pet-companheiro.webp | https://mifunko.com/personalizacion/wp-content/uploads/2026/06/ejemplo-mascota-2.webp | 32104 | 0e05890ded052bba4a184bcdac247de778eb385daaf5f2338eabdc096c21b238 | ORIGIN_REVIEW_REQUIRED |
+
+## Iconografia própria e seleção visual
+
+Doze SVGs locais originais, desenhados em código nesta etapa: camera, box, truck, pet, person, base, accessory, calendar, brush, printer, check e ruler, em assets/icons/. Sistema de traço 24 × 24, sem biblioteca, fonte ou ícone de marca. Status: ORIGINAL_APEX_IMPLEMENTATION. Pedido/aprovação usam câmera/check; tamanhos usam person/pet; upload, logística, embalagem e adicionais usam o mesmo sistema. Os ícones base/brush/printer/ruler ficam disponíveis para futuras composições, sem download adicional.
+
+Foram inspecionados 18 candidatos, sem download indiscriminado do catálogo. Três ficaram fora do repositório público: paso1-proceso_funkos.webp (site de terceiro), paso4-proceso_funkos.webp e icon-caja-individual.webp (embalagem com marca POP). Pedido/aprovação/caixa usam iconografia própria. As sete imagens de processo representam modelagem, cor, impressão, acabamento, pintura, embalagem e envio.
+
+Nenhum retrato/depoimento de cliente foi copiado como avaliação Apex. Família continua ilustrada por composição HTML de Casal + Individual. Não houve corte, retoque ou transformação das imagens recuperadas.
+
+Pendentes: portfólio Apex próprio, referências autorizadas de clientes, foto real de Família, caixa e processo Apex, além de avaliações verificadas. As fotos de upload continuam somente em memória e não integram esses arquivos.
+
+---
+
+## Histórico V0.5 e inventário original
+
 # Correção visual seletiva — estado atual
 
 Sete assets do baseline foram recuperados localmente para staging por solicitação explícita do proprietário. Todos estão marcados **ORIGIN_REVIEW_REQUIRED**. Consulte [VISUAL-RESTORATION](VISUAL-RESTORATION.md) para URLs exatas, hashes, tamanhos, usos e classificação RESTORE / KEEP REMOVED / REPLACE LATER de cada URL inventariada.

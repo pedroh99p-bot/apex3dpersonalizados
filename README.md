@@ -1,4 +1,4 @@
-# Apex3D · Frontend comercial V0.5
+# Apex3D · Frontend comercial V0.6
 
 Implementação standalone em HTML, CSS e JavaScript local. Oferta em BRL, personalização guiada por fotos, adicionais progressivos, revisão e pedido de teste. Sem backend, pagamento, envio externo ou persistência das fotos.
 
@@ -9,19 +9,20 @@ A entrada comercial é **dev.html**. O **index.html da raiz é um snapshot hist�
 - **npm run dev**: página comercial em http://127.0.0.1:4173/.
 - **npm test**: testes de cálculo, uploads e contrato de produção.
 - **npm run test:smoke**: Playwright com Edge; evidências em test-results/ (ignorado).
+- **npm run test:smoke:build**: gera dist e repete todas as suítes diretamente no build.
 - **npm run build**: cria **dist/** com a página Apex como index e somente arquivos públicos autorizados. Configure a hospedagem de staging para publicar **dist**, nunca a raiz.
 
 Node.js é suficiente para executar e gerar o site. Para os testes de navegador, disponibilize Playwright e Edge. O runner aceita APEX_PLAYWRIGHT_PATH apontando ao módulo playwright/index.mjs e APEX_BROWSER para selecionar outro canal Chromium instalado.
 
 ### Deploy na Vercel
 
-O arquivo vercel.json define o projeto como estático, executa **npm run build** e publica **dist**. Não use public como Output Directory. Mantenha Root Directory na raiz deste repositório e faça o deploy de um commit que contenha essa configuração, na branch feat/apex-frontend-v05. Os cabeçalhos de homologação também estão configurados para a Vercel.
+O arquivo vercel.json define o projeto como estático, executa **npm run build** e publica **dist**. Não use public como Output Directory. Mantenha Root Directory na raiz deste repositório e faça o deploy de um commit que contenha essa configuração, na branch feat/apex-frontend-v06-conversion. Os cabeçalhos de homologação também estão configurados para a Vercel.
 
 ## Contrato atual
 
-Consulte [APEX-FRONTEND-V05](docs/APEX-FRONTEND-V05.md) para identidade, oferta, preços de homologação, limites e resultado dos testes; [dependências atuais](docs/APEX-DEPENDENCIES.md) e [procedência dos assets](docs/ASSET-MAP.md).
+Consulte [APEX-FRONTEND-V06-CONVERSION](docs/APEX-FRONTEND-V06-CONVERSION.md) para identidade, oferta, preços de homologação, limites e resultado dos testes; [dependências atuais](docs/APEX-DEPENDENCIES.md) e [procedência dos assets](docs/ASSET-MAP.md).
 
-Individual R$197; Pet R$157; Casal R$347; Família (3 pessoas) R$477. Preços centralizados em config/pricing.js, sujeitos a revisão antes da produção. Frete não incluído.
+Simulação autorizada: 6 cm R$100, 10 cm R$150, 15 cm R$170 e 20 cm R$200 por miniatura. Casal/Família multiplicam por duas/três pessoas. Acessórios simples/detalhados R$15/R$20; demais extras com estimativas explícitas. Tudo provisório, sem cobrança e sem frete. Tabelas em config/commercial.js e config/pricing.js.
 
 Fotos permanecem em memória com validação e recibos internos por pessoa/pet/adicional. O CTA “Gerar pedido de teste” gera um rascunho local: não faz cobrança, não envia pedido e não inicia produção. Recarregar encerra a configuração. A inspeção em window.apexDevelopment omite textos livres e nomes dos arquivos.
 
@@ -34,4 +35,4 @@ Fotos permanecem em memória com validação e recibos internos por pessoa/pet/a
 - V0.5: branch feat/apex-frontend-v05.
 - Origin: https://github.com/pedroh99p-bot/apex3dpersonalizados.
 
-Os inventários TECHNICAL-MAP, USER-FLOW, PRICING, LOCAL-REIMPLEMENTATION, DEPENDENCY-CLASSIFICATION e APEX-MVP-CONTRACT documentam fases anteriores. As decisões comerciais V0.5 prevalecem sobre regras e preços herdados. A correção visual recupera sete imagens do baseline para staging, por solicitação do proprietário; estão locais e marcadas ORIGIN_REVIEW_REQUIRED. Consulte docs/VISUAL-RESTORATION.md.
+O contrato atual está em docs/APEX-MVP-CONTRACT.md e a matriz da reconstrução em docs/ORIGINAL-SCROLL-MAP.md. Os inventários TECHNICAL-MAP, USER-FLOW, PRICING, LOCAL-REIMPLEMENTATION, DEPENDENCY-CLASSIFICATION e VISUAL-RESTORATION descrevem fases anteriores. As decisões V0.6 prevalecem sobre esses históricos. A prévia usa 22 imagens restauradas locais, marcadas ORIGIN_REVIEW_REQUIRED em docs/ASSET-MAP.md; além da logo Apex e ícones originais.

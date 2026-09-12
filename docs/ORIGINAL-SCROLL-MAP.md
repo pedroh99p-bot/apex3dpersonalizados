@@ -76,3 +76,7 @@ V0.6: navbar → hero com preço inicial → modelos selecionáveis → oito pas
 | Extras | Base suporte/proteção/ímãs incluídos no original; nome +6; nome/data +10; grama +8 | Só base sem gravação/embalagem padrão inclusas; nome +R$19, nome/data +R$29 |
 
 Não converter EUR por simples troca de símbolo. Valores BRL para 10/15/20 e caixas aguardam informação do proprietário. Se não houver aprovação, mostrar apenas 6 cm selecionável; medidas maiores podem ser informadas como indisponíveis, sem preço inventado nem badge “mais escolhido”.
+
+## Decisão posterior do proprietário — V0.6 com placeholders
+
+Após este mapeamento e antes de concluir a experiência, o proprietário autorizou simulação com valores provisórios: 6 cm R$100, 10 cm R$150, 15 cm R$170, 20 cm R$200; acessórios em torno de R$15/R$20 e placeholders onde não há definição. A implementação interpreta o valor por miniatura, incluindo pessoas adicionais, e mantém Casal/Família multiplicados por duas/três figuras. Essa autorização supera o bloqueio inicial de tamanhos maiores apenas para esta prévia. Não homologa fabricação, cobrança ou compatibilidade de caixas. A caixa de R$39 nos quatro tamanhos é placeholder explícito; pet adicional de 4 cm R$79 e bases R$19/R$29 permanecem estimativas herdadas. Nenhum preço EUR é convertido ou aplicado.
