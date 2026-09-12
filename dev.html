@@ -12,9 +12,10 @@
   <meta property="og:image" content="/assets/brand/apex-logo.webp">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#cc1233">
-  <title>Apex3D | Miniatura 3D Personalizada</title>
+  <title>Apex3D | Crie sua Miniatura 3D Personalizada</title>
   <link rel="stylesheet" href="/css/tokens.css">
   <link rel="stylesheet" href="/css/apex.css">
+  <link rel="stylesheet" href="/css/conversion.css">
   <script type="module" src="/js/main.js"></script>
 </head>
 <body>
@@ -24,7 +25,7 @@
   <div class="container nav-inner">
     <a class="brand" href="#inicio" aria-label="Apex3D, início"><img src="/assets/brand/apex-logo.webp" alt="Apex3D" width="1536" height="1024"></a>
     <nav aria-label="Navegação principal">
-      <a href="#como-funciona">Como funciona</a><a href="#exemplos">Exemplos</a><a href="#personalize">Personalize</a>
+      <a href="#como-funciona">Como funciona</a><a href="#produtos">Modelos</a><a href="#exemplos">Exemplos</a><a href="#personalize">Personalize</a>
     </nav>
     <a class="button small" href="#personalize">Criar minha miniatura <span aria-hidden="true">↗</span></a>
   </div>
@@ -34,7 +35,7 @@
     <div class="hero-copy">
       <p class="eyebrow"><span class="red-line"></span> FEITA A PARTIR DE VOCÊ</p>
       <h1>Sua história.<br>Em outra <em>dimensão.</em></h1>
-      <p class="hero-description">Transforme sua foto em uma miniatura 3D feita especialmente para você.</p>
+      <p class="hero-description">Transforme sua foto em uma miniatura 3D feita especialmente para você.</p><div class="hero-offer"><span>Miniaturas a partir de</span><strong id="hero-from-price"></strong><small>Valores provisórios para simulação.</small></div>
       <a class="button" href="#personalize">Criar minha miniatura <span aria-hidden="true">↗</span></a>
       <p class="approval"><span aria-hidden="true">✓</span> Você aprova o modelo antes da produção.</p>
     </div>
@@ -70,55 +71,42 @@
     </section>
   </section>
   <div class="trust-strip container"><span>Uma criação só sua</span><span>Aprovação antes de produzir</span><span>Pessoas, histórias e pets</span></div>
-  <section class="section container" id="como-funciona">
-    <div class="section-heading"><div><p class="eyebrow">DO PRIMEIRO CLIQUE À MINIATURA</p><h2>Você imagina.<br>A gente dá forma.</h2></div><p>Seu olhar acompanha a criação.<br>O modelo só segue para produção após sua aprovação.</p></div>
-    <div class="steps-grid">
-      <article><span class="step-number">01</span><h3>Envie suas fotos</h3><p>Escolha referências nítidas de você, de quem você ama ou do seu pet.</p></article>
-      <article><span class="step-number">02</span><h3>Personalizamos. Você aprova.</h3><p>Roupa, pose e detalhes se encontram no modelo que você vai conferir.</p></article>
-      <article><span class="step-number">03</span><h3>Sua miniatura ganha vida</h3><p>Depois da aprovação e da confirmação do pedido, iniciamos a produção.</p></article>
-    </div>
-  </section>
+
   <section class="section product-section" id="produtos">
     <div class="container"><div class="section-heading"><div><p class="eyebrow">QUEM VAI GANHAR FORMA?</p><h2>Especial em qualquer versão.</h2></div><p>Miniatura 3D Personalizada<br>Para presentear. Ou para guardar.</p></div>
     <div id="product-cards" class="product-grid"></div>
     <p class="caption">Referências visuais de personalização. Família ilustrada pela composição de três miniaturas. Valores de homologação sujeitos a revisão antes da produção.</p></div>
   </section>
+<section class="section process-section" id="como-funciona"><div class="container"><div class="section-heading"><div><p class="eyebrow">VOCÊ PARTICIPA DE CADA ETAPA</p><h2>Da sua foto.<br>Até a sua casa.</h2></div><p>Um processo transparente.<br>Você aprova antes de produzir.</p></div><div class="process-grid"><article class="process-card"><div class="process-illustration"><img src="/assets/icons/camera.svg" width="72" height="72" alt=""></div><div class="process-copy"><span class="badge">PASSO 1</span><h3>Seu pedido começa aqui</h3><p>Escolha o modelo, envie suas fotos e conte os detalhes.</p></div></article><article class="process-card"><img src="/assets/process/modelagem.webp" width="845" height="563" loading="lazy" decoding="async" alt="Referência visual de o primeiro modelo 3d"><div class="process-copy"><span class="badge">PASSO 2</span><h3>O primeiro modelo 3D</h3><p>Suas referências dão forma à roupa, à pose e à personalidade.</p></div></article><article class="process-card"><div class="process-illustration"><img src="/assets/icons/check.svg" width="72" height="72" alt=""></div><div class="process-copy"><span class="badge">PASSO 3</span><h3>Você acompanha e aprova</h3><p>Confira o modelo e solicite os ajustes combinados antes da produção.</p></div></article><article class="process-card"><img src="/assets/process/cor.webp" width="845" height="563" loading="lazy" decoding="async" alt="Referência visual de a personalidade ganha cor"><div class="process-copy"><span class="badge">PASSO 4</span><h3>A personalidade ganha cor</h3><p>As cores e os detalhes seguem as referências aprovadas.</p></div></article><article class="process-card"><img src="/assets/process/impressao.webp" width="845" height="563" loading="lazy" decoding="async" alt="Referência visual de da tela para a impressão"><div class="process-copy"><span class="badge">PASSO 5</span><h3>Da tela para a impressão</h3><p>O modelo aprovado segue para a etapa de impressão 3D.</p></div></article><article class="process-card"><img src="/assets/process/pintura.webp" width="845" height="563" loading="lazy" decoding="async" alt="Referência visual de pintura e acabamento"><div class="process-copy"><span class="badge">PASSO 6</span><h3>Pintura e acabamento</h3><p>Preparação, pintura e cuidado com cada detalhe da miniatura.</p></div></article><article class="process-card"><img src="/assets/process/embalagem.webp" width="845" height="563" loading="lazy" decoding="async" alt="Referência visual de pronta para presentear"><div class="process-copy"><span class="badge">PASSO 7</span><h3>Pronta para presentear</h3><p>A embalagem protege e valoriza a sua criação.</p></div></article><article class="process-card"><img src="/assets/process/envio.webp" width="845" height="563" loading="lazy" decoding="async" alt="Referência visual de a caminho de uma nova história"><div class="process-copy"><span class="badge">PASSO 8</span><h3>A caminho de uma nova história</h3><p>Disponibilidade, frete e data são confirmados antes do pedido.</p></div></article></div><div class="process-detail"><img src="/assets/process/acabamento.webp" alt="Referência de acabamento manual da miniatura" width="845" height="563" loading="lazy"><div><span class="badge">CUIDADO NOS DETALHES</span><h3>Uma criação que passa pelas suas escolhas.</h3><p>O processo apresentado é uma referência de personalização. Esta prévia não envia pedidos nem inicia produção.</p><a href="#personalize" class="button secondary">Personalizar minha miniatura ↗</a></div></div><p class="caption">Imagens de referência recuperadas para staging; não representam instalações ou trabalhos próprios da Apex3D.</p></div></section>
+<section class="section gallery-section" id="exemplos"><div class="container"><div class="section-heading"><div><p class="eyebrow">CADA REFERÊNCIA, UMA POSSIBILIDADE</p><h2>Gente de verdade.<br>Histórias em miniatura.</h2></div><p>Profissões, paixões e companhias.<br>Explore as transformações.</p></div><div class="gallery-filters" role="group" aria-label="Filtrar exemplos"></div><div class="work-gallery"></div><p class="caption">Referências visuais para homologação. Não são trabalhos produzidos pela Apex3D.</p></div></section>
   <section class="section container" id="personalize">
     <div class="section-heading"><div><p class="eyebrow">AGORA, DO SEU JEITO</p><h2>Vamos criar sua miniatura?</h2></div><p>A foto é o ponto de partida.<br>Os detalhes deixam tudo mais seu.</p></div>
     <div class="config-layout">
       <div class="config-main">
         <div class="config-intro"><span class="status-dot"></span> Ambiente de homologação · nenhum pedido é enviado.</div>
-        <form id="configurator" novalidate>
-          <section class="form-section"><div class="form-heading"><span>01</span><h3>Escolha sua miniatura</h3></div><div id="product-picker" class="product-picker"></div><p class="help">Tamanho-base: 6 cm. Outras medidas serão disponibilizadas após homologação.</p></section>
-          <div id="primary-fields"></div>
-          <section class="form-section" id="upsells"><div class="form-heading"><span>04</span><div><h3>Deixe sua miniatura ainda mais única</h3><p class="help">Adicionais opcionais. Escolha só o que faz sentido para você.</p></div></div>
-            <details id="upsell-details"><summary>Explorar adicionais <span aria-hidden="true">+</span></summary><div id="upsell-fields"></div></details>
+        <nav id="journey-stepper" aria-label="Etapas da personalização"></nav><p id="journey-progress" class="help" aria-live="polite"></p><form id="configurator" novalidate>
+          <section class="form-section" data-step="product"><div class="form-heading"><span>01</span><h3>Escolha sua miniatura</h3></div><div id="product-picker" class="product-picker"></div><p class="help">Escolha quem vai ganhar forma. Os valores exibidos são estimativas de teste.</p></section>
+          <section class="form-section" data-step="size"><div class="form-heading"><span>02</span><h3>Qual tamanho combina com sua ideia?</h3></div><div id="size-fields"></div><p class="help">Medidas e preços provisórios. A compatibilidade física será confirmada antes de produzir.</p></section><div id="primary-fields"></div>
+          <section class="form-section" id="upsells" data-step="extras"><div class="form-heading"><span>05</span><div><h3>Deixe sua miniatura ainda mais única</h3><p class="help">Adicionais opcionais. Escolha só o que faz sentido para você.</p></div></div>
+            <details id="upsell-details" open><summary>Explorar adicionais <span aria-hidden="true">+</span></summary><div id="upsell-fields"></div></details>
           </section>
-          <section class="form-section"><div class="form-heading"><span>05</span><h3>Uma apresentação especial</h3></div><div id="packaging-fields"></div></section>
-          <section class="form-section"><div class="form-heading"><span>06</span><h3>Data e últimos detalhes</h3></div>
-            <label class="field">Quando você precisa receber?<input type="date" id="needed-date" data-field="mf_shipping_date" required aria-describedby="date-help"></label>
+          <section class="form-section" data-step="packaging"><div class="form-heading"><span>06</span><h3>Uma apresentação especial</h3></div><div id="packaging-fields"></div></section>
+          <section class="form-section" data-step="delivery"><div class="form-heading"><span>07</span><h3>Quando sua criação precisa chegar?</h3></div>
+            <div class="delivery-methods"><article class="delivery-card"><img src="/assets/icons/truck.svg" width="36" height="36" alt=""><div><span class="badge">PADRÃO</span><h3>Com data a confirmar</h3><p>Prazo e frete combinados antes da confirmação. Nenhuma urgência automática.</p></div></article><article class="delivery-card unavailable"><img src="/assets/icons/calendar.svg" width="36" height="36" alt=""><div><h3>Precisa de mais rapidez?</h3><p>Modalidade expressa em definição. Ainda não disponível.</p></div></article></div><label class="field" for="needed-date">Quando você precisa receber?<input type="date" id="needed-date" data-field="mf_shipping_date" required aria-describedby="date-help"></label>
             <p class="help" id="date-help">Confirmaremos a disponibilidade da data após o pedido.</p>
-            <label class="field">Observações <span class="optional">opcional</span><textarea id="notes" rows="3" maxlength="2000" placeholder="O que mais precisamos saber sobre sua miniatura?"></textarea></label>
+            <label class="checkbox-field" for="flexible-date"><input type="checkbox" id="flexible-date" data-field="mf_shipping_flexible">Minha data é flexível</label><label class="field" for="notes">Observações <span class="optional">opcional</span><textarea id="notes" data-field="notes" rows="3" maxlength="2000" placeholder="O que mais precisamos saber sobre sua miniatura?"></textarea></label>
           </section>
           <div id="validation-errors" class="error-panel" role="alert" tabindex="-1" hidden></div>
-          <button class="button review-button" type="submit">Revisar pedido <span aria-hidden="true">↗</span></button>
+          <section class="form-section" data-step="review"><div class="form-heading"><span>08</span><h3>Sua criação está quase pronta.</h3></div><p>Confira todos os detalhes e gere um pedido de teste. Nenhum valor será cobrado.</p><button class="button review-button" type="submit">Revisar pedido <span aria-hidden="true">↗</span></button>
           <p class="help form-footnote">Fotos ficam apenas nesta sessão. Ao recarregar ou sair, a configuração será perdida. Esta versão não envia pedidos nem recebe pagamentos.</p>
-        </form>
+        </section><div class="journey-actions"><button type="button" class="button secondary" id="journey-back">Voltar</button><button type="button" class="button" id="journey-next">Continuar →</button></div></form>
       </div>
-      <aside class="order-summary" aria-label="Resumo de valores"><p class="eyebrow">SUA CRIAÇÃO</p><h3 id="summary-product"></h3><p class="help">Miniatura 3D Personalizada</p><div id="summary-lines"></div><div class="total-row"><span>Total estimado</span><strong id="summary-total" aria-live="polite"></strong></div><p class="help">Frete a confirmar. Preços de homologação.</p><div class="summary-detail" id="summary-date"></div><p class="summary-approval">✓ Você aprova o modelo<br>antes da produção.</p><button type="submit" form="configurator" class="button">Revisar pedido</button></aside>
+      <aside class="order-summary" aria-label="Resumo de valores"><p class="eyebrow">SUA CRIAÇÃO</p><h3 id="summary-product"></h3><p class="help" id="summary-composition"></p><div id="summary-lines"></div><div class="total-row"><span>Total estimado</span><strong id="summary-total" aria-live="polite"></strong></div><p class="help">Frete a confirmar. Valores provisórios, sem cobrança.</p><div class="summary-detail" id="summary-date"></div><p class="summary-approval">✓ Você aprova o modelo<br>antes da produção.</p><button type="button" id="summary-continue" class="button">Continuar →</button></aside>
     </div>
   </section>
-  <section class="section examples-section" id="exemplos"><div class="container">
-    <div class="section-heading"><div><p class="eyebrow">DA REFERÊNCIA AO RESULTADO</p><h2>Uma história, três momentos.</h2></div><p>Foto, modelo e miniatura.<br>Veja a personalização em cada detalhe.</p></div>
-    <div class="example-grid">
-      <article><img class="restored-example" src="/assets/examples/individual-profissao.webp" width="1024" height="1024" alt="Referência de profissão: foto, modelo e miniatura com uniforme lilás" loading="lazy" decoding="async"><h3>O que faz parte de você</h3><p>Roupa, profissão e detalhes da sua personalidade.</p></article>
-      <article><img class="restored-example" src="/assets/examples/casal.webp" width="600" height="600" alt="Referência de duas pessoas transformadas em miniaturas" loading="lazy" decoding="async"><h3>Uma história compartilhada</h3><p>Duas referências, uma criação especial.</p></article>
-      <article><img class="restored-example" src="/assets/examples/pet.webp" width="600" height="600" alt="Referência de cachorro e miniatura com a mesma pelagem" loading="lazy" decoding="async"><h3>Seu companheiro de sempre</h3><p>As características que tornam seu pet único.</p></article>
-    </div>
-    <p class="caption">Referências visuais para homologação. Não representam trabalhos produzidos pela Apex3D.</p>
-  </div></section>
+
   <section class="section container benefits"><p class="eyebrow">O QUE TORNA A CRIAÇÃO ESPECIAL</p><h2>Os detalhes importam.<br>Porque a história é sua.</h2><div class="steps-grid"><article><h3>Referência de verdade</h3><p>Suas fotos guiam a aparência. Você não precisa descrever cada característica do rosto.</p></article><article><h3>Espaço para suas ideias</h3><p>Escolha a roupa, sugira uma pose e inclua os objetos que fazem parte da sua história.</p></article><article><h3>Você participa</h3><p>O modelo é apresentado para aprovação antes de virar uma miniatura física.</p></article></div><p class="caption">As primeiras avaliações verificadas serão publicadas aqui após entregas reais.</p></section>
-  <section class="section container faq" id="duvidas"><div><p class="eyebrow">ANTES DE COMEÇAR</p><h2>Ficou alguma dúvida?</h2><p>Um pouco mais sobre o processo.</p></div><div>
+  <section class="section testimonials-section" id="avaliacoes"><div class="container"><div class="section-heading"><div><p class="eyebrow">ESPAÇO PARA HISTÓRIAS REAIS</p><h2>A próxima história<br>pode ser a sua.</h2></div><p>As avaliações serão publicadas<br>após entregas reais verificadas.</p></div><div class="testimonial-grid"><article class="testimonial-card"><span class="badge">ESPAÇO RESERVADO · STAGING</span><div class="empty-stars" aria-label="Sem avaliação">☆☆☆☆☆</div><p>Aqui aparecerá uma experiência real de quem recebeu sua miniatura Apex3D.</p><div class="testimonial-person"><img src="/assets/icons/person.svg" width="40" height="40" alt=""><span>Avaliação futura<br><small>Ainda sem depoimento</small></span></div></article><article class="testimonial-card"><span class="badge">ESPAÇO RESERVADO · STAGING</span><div class="empty-stars" aria-label="Sem avaliação">☆☆☆☆☆</div><p>Aqui aparecerá uma experiência real de quem recebeu sua miniatura Apex3D.</p><div class="testimonial-person"><img src="/assets/icons/person.svg" width="40" height="40" alt=""><span>Avaliação futura<br><small>Ainda sem depoimento</small></span></div></article><article class="testimonial-card"><span class="badge">ESPAÇO RESERVADO · STAGING</span><div class="empty-stars" aria-label="Sem avaliação">☆☆☆☆☆</div><p>Aqui aparecerá uma experiência real de quem recebeu sua miniatura Apex3D.</p><div class="testimonial-person"><img src="/assets/icons/person.svg" width="40" height="40" alt=""><span>Avaliação futura<br><small>Ainda sem depoimento</small></span></div></article></div></div></section><section class="section container faq" id="duvidas"><div><p class="eyebrow">ANTES DE COMEÇAR</p><h2>Ficou alguma dúvida?</h2><p>Um pouco mais sobre o processo.</p></div><div>
     <details><summary>Qual é o prazo para receber?</summary><p>Informe a data desejada no configurador. A Apex3D confirmará a disponibilidade e o prazo de produção e entrega antes de confirmar o pedido. A data selecionada não é uma promessa automática.</p></details>
     <details><summary>Quais fotos devo enviar?</summary><p>Use fotos nítidas, bem iluminadas e sem filtros, com rosto e roupa visíveis. Para pets, mostre também a pelagem. Cada pessoa e pet adicional precisa da própria referência.</p></details>
     <details><summary>Posso personalizar a roupa e a pose?</summary><p>Sim. Você pode seguir a foto ou descrever uma roupa e uma pose diferentes. Uma foto extra da roupa é opcional.</p></details>
@@ -128,8 +116,8 @@
     <details><summary>Como será a entrega?</summary><p>O frete, a cobertura e o prazo serão informados antes da confirmação do pedido. O valor mostrado nesta prévia não inclui frete.</p></details>
   </div></section>
 </main>
-<footer><div class="container footer-main"><a class="brand" href="#inicio" aria-label="Apex3D, início"><img src="/assets/brand/apex-logo.webp" alt="Apex3D" width="1536" height="1024" loading="lazy"></a><div><h2>Sua história ganha forma.</h2><p>Miniatura 3D Personalizada.</p></div><a href="#personalize">Criar minha miniatura ↗</a></div><div class="container footer-bottom"><span>Apex3D · Prévia comercial V0.5</span><span>Pedidos de teste · sem envio e sem pagamento</span></div></footer>
-<dialog id="order-review" aria-labelledby="review-title"><div id="review-content"></div></dialog>
+<footer><div class="container footer-main"><a class="brand" href="#inicio" aria-label="Apex3D, início"><img src="/assets/brand/apex-logo.webp" alt="Apex3D" width="1536" height="1024" loading="lazy"></a><div><h2>Sua história ganha forma.</h2><p>Miniatura 3D Personalizada.</p></div><a href="#personalize">Criar minha miniatura ↗</a></div><div class="container footer-bottom"><span>Apex3D · Prévia comercial V0.6</span><span>Pedidos de teste · sem envio e sem pagamento</span></div></footer>
+<div id="mobile-order-bar" hidden><div><small>Total estimado</small><strong id="mobile-total"></strong></div><button type="button" class="button" id="mobile-continue">Continuar →</button></div><dialog id="gallery-lightbox" aria-label="Exemplo de personalização"><button type="button" class="close-review" id="gallery-close" aria-label="Fechar exemplo">×</button><img id="gallery-enlarged" src="/assets/examples/individual-futebol.webp" alt="" width="600" height="600" loading="lazy"><p id="gallery-caption"></p></dialog><dialog id="order-review" aria-labelledby="review-title"><div id="review-content"></div></dialog>
 <dialog id="order-confirmation" aria-labelledby="confirmation-title"><div class="confirmation-content"><p class="eyebrow">PRÉVIA CONCLUÍDA</p><h2 id="confirmation-title" tabindex="-1">Seu pedido de teste está pronto.</h2><p>Nenhum pedido foi enviado e nenhum pagamento foi realizado.</p><p class="help">O rascunho está disponível apenas nesta sessão. As fotos não foram armazenadas remotamente.</p><button class="button" id="close-confirmation" type="button">Voltar à minha criação</button></div></dialog>
 <noscript>Ative o JavaScript para configurar sua miniatura. Esta página não envia pedidos.</noscript>
 </body>

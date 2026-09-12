@@ -31,6 +31,7 @@ export function renderOrderReview(container, state, { uploads = [], onEdit, onGe
   const photos = field => uploads.filter(u => u.owner.itemId === 'main-1' && u.owner.field === field);
   const c = state.customizations, product = products[state.product], price = calculatePrice(state);
   const total = node('div', undefined, 'total-row'); total.append(node('span', 'Total estimado'), node('strong', formatMoney(price.totalCents))); container.append(total);
+  container.append(node('p', 'Simulação com preços provisórios. Valores, tamanhos e embalagem serão confirmados antes de qualquer produção ou cobrança.', 'review-warning'));
   section('Sua miniatura', [['Produto', product.label + ' · ' + state.size + ' cm'], ['Composição', product.kind === 'pet' ? 'Pet principal' : c.figures.length + ' pessoa(s), incluindo ' + c.additionalPeople + ' adicional(is)'], ['Fotos anexadas', state.uploads.length]]);
   c.figures.forEach((f, i) => {
     const reference = photos(f.id + '.mf_face_photo_upload[]');
@@ -59,7 +60,7 @@ export function renderOrderReview(container, state, { uploads = [], onEdit, onGe
     if (c.box.dedication) packRows.push(['Dedicatória', c.box.fields.mf_box_dedication_text]);
   }
   section('Base e embalagem', packRows);
-  section('Últimos detalhes', [['Data desejada', displayDate(state.shipping.date)], ['Observações', state.notes || 'Nenhuma observação']]);
+  section('Últimos detalhes', [['Data desejada', displayDate(state.shipping.date)], ['Data flexível', state.shipping.flexible ? 'Sim' : 'Não'], ['Observações', state.notes || 'Nenhuma observação']]);
   const base = price.lines.find(l => l.code === 'base').cents;
   section('Valores de homologação', [['Preço base', formatMoney(base)], ...price.lines.filter(l => l.code !== 'base').map(l => [l.label, formatMoney(l.cents)]), ['Adicionais', formatMoney(price.unitTotalCents - base)], ['Total estimado', formatMoney(price.totalCents)], ['Frete', 'A confirmar']]);
   container.append(node('p', 'Confirmaremos a disponibilidade da data após o pedido. Você aprova o modelo antes da produção. Nesta homologação, gerar o pedido de teste não envia dados nem realiza pagamento.', 'review-warning'));
