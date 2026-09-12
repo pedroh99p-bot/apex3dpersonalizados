@@ -19,11 +19,11 @@ async function complete(t, product = 'individual') {
   state.uploads = store.metadata(); return { state, store };
 }
 test('quatro produtos geram draft BRL validado sem características manuais', async t => {
-  for (const [type, expected] of [['individual',19700],['pet',15700],['casal',34700],['familia',47700]]) {
+  for (const [type, expected] of [['individual',10000],['pet',10000],['casal',20000],['familia',30000]]) {
     const { state } = await complete(t, type), result = createOrderDraft(state, options);
     assert.equal(result.valid, true, JSON.stringify(result.errors));
     assert.equal(result.orderDraft.pricing.totalCents, expected); assert.equal(result.orderDraft.pricing.currency, 'BRL');
-    assert.equal(result.orderDraft.productionValidation, 'passed'); assert.equal(result.orderDraft.shipping.date, '2030-05-10');
+    assert.equal(result.orderDraft.productionValidation, 'passed'); assert.equal(result.orderDraft.productionReady, false); assert.equal(result.orderDraft.pricing.status, 'estimate'); assert.equal(result.orderDraft.shipping.date, '2030-05-10');
     assert.equal(result.orderDraft.customer, null);
   }
 });
@@ -50,7 +50,7 @@ test('pessoa adicional exige sua própria foto', async t => {
   const { state, store } = await complete(t); state.customizations.additionalPeople = 1; state.customizations.figures.push(createFigure(1));
   assert.ok(codes(state).includes('PHOTO_REQUIRED'));
   await store.add({ itemId: 'main-1', field: 'figure-2.mf_face_photo_upload[]' }, [file()]); state.uploads = store.metadata();
-  assert.equal(createOrderDraft(state, options).orderDraft.pricing.totalCents, 32700);
+  assert.equal(createOrderDraft(state, options).orderDraft.pricing.totalCents, 20000);
 });
 test('datas passadas/inexistentes rejeitadas, hoje e fim de semana aceitos', async t => {
   const { state } = await complete(t);

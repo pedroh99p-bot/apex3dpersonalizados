@@ -21,7 +21,7 @@ export function calculatePrice(state) {
     if (cents || code === 'base') lines.push({ code, label, cents });
   };
   add('base', product.label, value(p.base, state.product));
-  add('size', 'Tamanho', value(product.kind === 'pet' ? p.petSize : p.humanSize, state.size));
+  add('size', 'Tamanho', value(product.kind === 'pet' ? p.petSize : p.humanSize, state.size) * (c.figures.length || 1));
   add('people', 'Pessoa adicional', c.additionalPeople * p.additionalPerson);
   const accessories = product.kind === 'pet' ? [c.pet] : c.figures;
   c.figures.forEach(f => {
@@ -49,5 +49,5 @@ export function calculatePrice(state) {
   const unitTotalCents = lines.reduce((sum, line) => sum + line.cents, 0);
   const mainTotalCents = unitTotalCents * state.quantity;
   if (!Number.isSafeInteger(mainTotalCents)) throw new Error('Total fora do limite numérico.');
-  return { currency: p.currency, lines, unitTotalCents, mainTotalCents, giftTotalCents: 0, totalCents: mainTotalCents, freightCents: null, finalCheckout: false };
+  return { currency: p.currency, status: p.status, lines, unitTotalCents, mainTotalCents, giftTotalCents: 0, totalCents: mainTotalCents, freightCents: null, finalCheckout: false };
 }

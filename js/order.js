@@ -6,7 +6,7 @@ export { validateOrderForProduction } from './validation.js';
 export function createOrderDraft(state, options) {
   const validation = validateOrderForProduction(state, options);
   if (!validation.valid) return { ...validation, orderDraft: null };
-  const orderDraft = { ...buildOrder(state), id: crypto.randomUUID(), productionValidation: 'passed', createdAt: new Date().toISOString() };
+  const orderDraft = { ...buildOrder(state), id: crypto.randomUUID(), productionValidation: 'passed', productionReady: false, createdAt: new Date().toISOString() };
   return { valid: true, errors: [], orderDraft };
 }
 
@@ -35,7 +35,7 @@ export function buildOrder(state) {
 }
 // Representação permitida para inspeção: sem nomes de arquivos, textos livres ou dados pessoais.
 export function safeOrderSummary(order) {
-  return { schemaVersion: order.schemaVersion, mode: order.mode, status: order.status, productionValidation: order.productionValidation, customer: null,
+  return { schemaVersion: order.schemaVersion, mode: order.mode, status: order.status, productionValidation: order.productionValidation, productionReady: order.productionReady, customer: null,
     items: order.items.map(item => ({ id: item.id, productId: item.productId, quantity: item.quantity, sizeCm: item.sizeCm,
       uploadIds: item.uploads, pricing: item.pricing })),
     uploads: order.uploads.map(u => ({ id: u.id, owner: u.owner, type: u.type, size: u.size })),

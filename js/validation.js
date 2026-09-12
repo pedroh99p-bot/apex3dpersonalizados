@@ -101,6 +101,7 @@ export function validateOrderForProduction(state, options = {}) {
   if (c.extras.includes('base-com-nome-data') && validateDesiredDate(c.fields.baseDate, { now: new Date(1900, 0, 1) })) add('baseDate', 'BASE_DATE_REQUIRED', 'Informe uma data válida para gravar na base.');
   if (!own(pricing.shipping, state.shipping.option)) add('mf_shipping_option', 'SHIPPING_REQUIRED', 'Escolha uma opção de prazo.');
   const dateError = validateDesiredDate(state.shipping.date, options);
+  if (typeof state.shipping.flexible !== 'boolean') add('mf_shipping_flexible', 'FLEXIBILITY_INVALID', 'Confira a flexibilidade de data.');
   if (dateError) add('mf_shipping_date', dateError.code, dateError.message);
   if (typeof state.gift.enabled !== 'boolean' || !['sketch', 'upload'].includes(state.gift.imageSource)) add('gift', 'GIFT_INVALID', 'Confira a personalização da caneca.');
   if (state.gift.enabled) add('gift', 'OPTION_UNAVAILABLE', 'A caneca ainda não está disponível nesta oferta.');
